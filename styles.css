@@ -1,0 +1,146 @@
+body {
+  --main-color: #000;
+  --secondary-color: #202020;
+  --tertiary-color: #e60000;
+  --text-color: #fff;
+  
+  font-family: arial;
+  width: 100%;
+  margin: 0;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.75);
+  color: #eee;
+  width: calc(100% - 500px);
+  padding-right: 250px;
+  padding-left: 250px;
+  height: 70px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-left h1 {
+  margin-right: 25px;
+}
+
+.nav-left a {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  text-decoration: none;
+  margin: 10px;
+  color: #909090;
+}
+
+.nav-left a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--tertiary-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-left a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav button {
+  border: none;
+  border-radius: 5px;
+  width: 90px;
+  height: 40px;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  transition: background-color 250ms, color 250ms;
+}
+
+nav button:hover {
+  background-color: #303030;
+  color: #fff;
+}
+
+.progress {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.progress div {
+  background-color: var(--tertiary-color);
+  width: 0;
+  height: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  width: 60%;
+  margin: 0 20% 5% 20%;
+}
+
+.intro-paragraph {
+  margin-top: 60px;
+}
+
+hr {
+  width: 100px;
+  border-top: dotted 5px #aaa;
+  border-bottom: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.item-wrapper {
+  margin-bottom: 70px;
+}
+
+.item-wrapper > h1 {
+  margin-bottom: 40px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-left > img {
+  margin-right: 40px;
+}
+
+.img-right > img {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
